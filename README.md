@@ -2,7 +2,7 @@
 
 Gemfile:
 ```ruby
-gem "wtf_logger", path:  "../wtf-logger"
+gem "wtf_logger", github:  "barnabyalter/wtf-logger"
 ```
 
 In your code:
