@@ -2,6 +2,7 @@
 
 ```
 # Levels: :debug, :info, :warn, :error, and :fatal
+# AKA:    :btw,   :fyi,  :smh,  :wtf, and   :please_advise
 def logger
   if defined?(::Rails)
     @logger ||= Rails.logger
@@ -11,9 +12,37 @@ def logger
 end
 ```
 
-## `wtf`
+## `btw`
+```ruby
+def btw(message)
+  logger.debug(message.cyan)
+end
 ```
-def wtf(message)
+
+## `fyi`
+```ruby
+def fyi(message)
   logger.info(message)
+end
+```
+
+## `smh`
+```ruby
+def smh(message)
+  logger.warn(message.magenta)
+end
+```
+
+## `wtf`
+```ruby
+def wtf(message)
+  logger.error(message.red)
+end
+```
+
+## `please_advise`
+```ruby
+def please_advise(message)
+  logger.fatal(message.upcase.black.on_red)
 end
 ```
