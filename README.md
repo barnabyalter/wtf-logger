@@ -1,5 +1,16 @@
 # wtf logger
 
+Gemfile:
+```ruby
+gem "wtf_logger", path:  "../wtf-logger"
+```
+
+In your code:
+```ruby
+require "wtf_logger"
+```
+
+Basically it's just:
 ```
 # Levels: :debug, :info, :warn, :error, and :fatal
 # AKA:    :btw,   :fyi,  :smh,  :wtf, and   :please_advise
